@@ -1,0 +1,592 @@
+@import url("https://fonts.googleapis.com/css2?family=Lustria &family=Montserrat:wght@500;600&display=swap");
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    letter-spacing: 0.175rem;
+    word-spacing: 0.175rem;
+}
+
+:root {
+    --maincolor: #f18416;
+    --color2: #e9ecef;
+    --buttoncolor: #db3135;
+    --textcolor: rgba(231, 231, 231, 0.6);
+}
+body {
+    overflow-x: hidden;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+html {
+    font-size: 62.5%;
+}
+
+.button {
+    min-width: 13rem;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--maincolor);
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.175rem;
+    border-radius: 0.5rem;
+}
+
+header {
+    padding: 2rem;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .navbar-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .navbar-section .links nav a {
+    color: white;
+    font-size: 1.4rem;
+    margin: 1.7rem;
+    text-decoration: none;
+    transition: all 0.4s;
+}
+
+header .navbar-section .links nav a:hover {
+    color: var(--buttoncolor);
+}
+
+
+header .navbar-section .links nav a.activelink {
+    color: var(--buttoncolor);
+}
+
+header .navbar-section .button {
+    border-radius: 0.8rem;
+}
+
+header .navbar-section .menu_button {
+    display: none;
+    background-color: transparent;
+    font-size: 3rem;
+    border: none;
+    outline: none;
+    color: var(--maincolor);
+}
+
+
+.mobile_navbar {
+    transition: all 0.4s;
+    width: 0;
+    overflow: hidden;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    height: 100vh;
+    min-height: 100vh;
+    /* padding: 2rem; */
+    z-index: 8;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.mobile_navbar .icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mobile_navbar .icons .close {
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mobile_navbar .icons .branch {
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.mobile_navbar .icons .icon {
+    padding: 1rem;
+    border-radius: 50%;
+    margin: 1rem 0;
+    /* background-color: var(--maincolor); */
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 0.1);
+}
+.mobile_navbar .icons .icon a {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.mobile_navbar .icons .icon:hover a {
+    color: var(--maincolor);
+}
+
+
+header .navbar-brand img {
+    width: 10rem;
+    height: 12rem;
+}
+
+
+section .hero-section {
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url("images/Front_Bannner4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+section .menu-hero-section {
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("images/menu.jpg");
+}
+section .hero-section .hero-content .title {
+    width: 50rem;
+    font-size: 6rem;
+    color: var(--maincolor);
+    font-weight: bold;
+}
+
+section .hero-section .hero-content .text {
+    margin: 3rem 0;
+    width: 40rem;
+    font-size: 2.5rem;
+    color: rgba(231, 231, 231, 0.6);
+    line-height: 1.4;
+}
+
+section .about-section,
+.contact-section {
+    margin: 10rem auto;
+}
+
+
+section .about-section .about-img img {
+    width: 100%;
+    height: 40rem;
+    border-radius: 0.5rem;
+    position: sticky;
+    top: 0;
+}
+
+section .contact-section .title {
+    font-size: 3rem;
+    color: var(--maincolor);
+}
+
+section .contact-section .boxes {
+    margin: 5rem 0;
+}
+
+section .contact-section .boxes .box {
+    color: var(--textcolor);
+    font-size: 1.5rem;
+    margin: 5rem 0;
+}
+
+section .contact-section .boxes .box .icon {
+    color: var(--maincolor);
+    font-size: 2.5rem;
+}
+
+
+section .contact-section .contact-form {
+    border: 1px solid var(--textcolor);
+    padding: 5rem;
+}
+
+section .contact-section .contact-content {
+    padding: 5rem;
+}
+
+
+section .contact-section .contact-form form {
+    /* border:1px solid var(--textcolor); */
+    margin: 5rem 0;
+}
+
+section .contact-section .contact-form .sub-title {
+    font-size: 1rem;
+    color: var(--textcolor);
+}
+
+section .about-section,
+.contact-section .row {
+    display: flex;
+
+}
+
+section .about-section .about-content .small-title {
+    color: var(--maincolor);
+}
+
+section .about-section .about-content .text {
+    color: rgba(231, 231, 231, 0.6);
+    line-height: 2;
+    margin: 3rem 0;
+}
+
+section .ad-section {
+    /* border:1px solid red; */
+    height: 60rem;
+    margin: 15rem auto;
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("images/reservation.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 0.8rem;
+    display: grid;
+    place-items: center;
+    margin:auto;
+
+}
+
+section .ad-section .ad-content {
+    width: 70%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+
+section .ad-section .ad-content h4 {
+    color: rgba(231, 231, 231, 0.6);
+    line-height: 1.5;
+}
+
+section .ad-section .ad-content h1 {
+    color: var(--maincolor);
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+section .ad-section .ad-content .call-text {
+    color: rgba(231, 231, 231, 0.6);
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+section .menu-section .items {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 10rem 0;
+}
+
+section .menu-section .items .row_ {
+    display: flex;
+    justify-content: flex-start;
+}
+
+section .menu-section .items .row_ .col_:not(:first-child){
+    padding:0rem 2.5rem;
+}
+
+section .menu-section .items .item {
+    width: max-content;
+    min-width: 30rem;
+    height: auto;
+    margin: 3rem auto;
+}
+
+section .menu-section .items .item img {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+section .menu-section .items .item .price {
+    font-weight: bold;
+    color: var(--maincolor);
+}
+
+section .menu-section .items .item .desc {
+    color: var(--textcolor);
+    font-size: 1rem;
+    word-break: break-all;
+}
+
+section .feedback-section {
+    padding: 5rem 0;
+
+}
+section .feedback-section form {
+    width: 50%;
+    margin: auto;
+    padding: 5rem;
+    border: 1px solid var(--textcolor);
+
+}
+
+section .reservation-table {
+    padding: 3rem 0;
+}
+
+section .reservation-table .row .col_:not(:last-child) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+section .reservation-table .left_side .logo img {
+    width: 10rem;
+    height: 12rem;
+}
+
+section .reservation-table .left_side .title {
+    color: var(--textcolor);
+    margin: 2rem 0;
+}
+
+
+section .reservation-table .left_side .small-title {
+    color: var(--textcolor);
+}
+
+section .reservation-table .left_side .button {
+    border-radius: 0.5rem;
+    padding: 1rem 1.6rem;
+}
+
+section .reservation-table .left_side .social-media {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+
+
+section .reservation-table .left_side .social-media a {
+    margin: 1rem;
+    color: white;
+    text-decoration: none;
+}
+section .reservation-table .right_side {
+    padding: 4rem 2rem;
+}
+section .reservation-table .right_side .title {
+    width: 80%;
+    font-size: 3rem;
+    color: var(--maincolor);
+}
+
+section .reservation-table .right_side form {
+    width: 80%;
+    margin: 3rem 0;
+}
+
+
+section .branch-section {
+    /* border:1px solid red; */
+    padding: 10rem 0;
+}
+
+section .branch-section .branch {
+    margin: 10rem 0;
+}
+
+section .branch-section .branch .row .col_ {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+section .branch-section .branch .row .map iframe {
+    width: 100%;
+    height: 40rem;
+}
+
+
+section .branch-section .branch .row .content {
+    padding: 0 10rem;
+}
+
+section .branch-section .branch .row .content .title {
+    color: var(--maincolor);
+    font-size: 3rem;
+}
+
+section .branch-section .branch .row .content .small-title {
+    color: var(--textcolor);
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+
+.input {
+    margin: 1.6rem 0;
+}
+
+.input p {
+    font-size: 1.3rem;
+    color: var(--textcolor);
+    font-weight: bold;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid var(--textcolor);
+    padding: 0.8rem 1.5rem;
+    font-size: 1.5rem;
+    background-color: black;
+    color: white;
+}
+
+.input_with_icon {
+    position: relative;
+}
+
+.input_with_icon span {
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+    font-size: 2.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.input_with_icon input {
+    padding-right: 4rem;
+}
+
+
+footer {
+    margin-top: auto;
+    background-color: var(--buttoncolor);
+    color: white;
+    width: 100%;
+    padding: 3rem;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: block;
+    /* background-color: #f2d9d3; */
+    margin-top: 10px;
+}
+
+
+/* responsive css */
+
+@media(max-width:1200px) {
+    section .about-section .about-content {
+        margin: 5rem 0;
+    }
+
+    section .ad-section {
+        position: relative;
+        left:50%;
+        transform: translateX(-50%);
+    
+    }
+    
+    section .ad-section {
+        margin: 10rem 0;
+    }
+
+    section .ad-section .ad-content {
+        width: 98%;
+    }
+
+
+    section .ad-section .ad-content h4 {
+        font-size: 1.4rem;
+    }
+
+    section .ad-section .ad-content h1 {
+        font-size: 1.8rem;
+        margin-top: 1.2rem;
+        word-break: break-all;
+    }
+
+    section .ad-section .ad-content .call-text {
+        margin-top: 1.2rem;
+    }
+
+    section .reservation-table .row .col_:last-child {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section .reservation-table .right_side .title {
+        text-align: center;
+    }
+
+    header .navbar-section .links {
+        display: none;
+    }
+
+    header .navbar-section .button_ {
+        display: none;
+    }
+
+
+    section .hero-section .hero-content {
+        width: 90%;
+    }
+
+    header .navbar-brand img {
+        width: 8rem;
+        height: 10rem;
+    }
+
+    section .hero-section {
+        background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url("images/Front_Bannner4.jpg");
+        background-position: center top;
+    }
+
+    section .hero-section .hero-content .title {
+        width: 90%;
+        font-size: 4rem;
+
+    }
+
+    section .hero-section .hero-content .text {
+        font-size: 1.7rem;
+        width: 60%;
+    }
+
+    header .navbar-section .menu_button {
+        display: block;
+    }
+
+}

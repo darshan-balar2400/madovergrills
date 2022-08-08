@@ -1,0 +1,191 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lustria&family=Montserrat:wght@500;600&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 0.175rem;
+}
+
+html{
+    font-size:62.5%;
+}
+
+button{
+  text-transform: uppercase;
+  letter-spacing:0.175rem;
+}
+
+.button{
+  width:auto;
+  min-width: 10rem;
+  border:none;
+  outline:none;
+  height:3.938rem;
+  color:white;
+  text-align:center;
+  background-color: #EC3F22;
+  font-size:1.5rem;
+  padding:0rem 2rem;
+}
+
+.admin_container {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    text-transform: uppercase;
+    letter-spacing: 0.175rem;
+  }
+  .admin_container .admin_content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .admin_container .admin_content .admin_menu {
+    position: sticky;
+    left: 0;
+    width: 15%;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+    /* border:1px solid red; */
+    height: 100%;
+    min-height: 100vh;
+  }
+  .admin_container .admin_content .admin_menu .admin_menu_item_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4rem;
+  }
+  .admin_container .admin_content .admin_menu .admin_menu_items {
+    margin: 5rem 0rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .admin_container .admin_content .admin_menu .admin_menu_items .admin_menu_item {
+    width: 70%;
+    margin: 1.5rem 0rem;
+  }
+  .admin_container .admin_content .admin_menu .admin_menu_items .admin_menu_item button {
+    outline: none;
+    border: none;
+    padding: 1rem 3rem;
+    color: #900C3E;
+    background-color: white;
+    font-weight: bold;
+    width: 100%;
+    border-radius: 3rem;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-evenly;
+  }
+  .admin_container .admin_content .admin_menu .admin_menu_items .admin_menu_item .admin_menu_item_active button {
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+    background-color: #900C3E;
+    color: white;
+  }
+  .admin_container .admin_content .admin_body {
+    width: 85%;
+    height: 100%;
+    padding: 0rem 5rem;
+  }
+  .admin_container .admin_content .admin_body .admin_body_content {
+    margin: 10rem 0rem;
+  }
+  .admin_container .admin_content .admin_body .admin_body_content .edit, .admin_container .admin_content .admin_body .admin_body_content .delete {
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    letter-spacing: 0.175rem;
+    background-color: transparent;
+  }
+  .admin_container .admin_content .admin_body .admin_body_content .edit {
+    color: green;
+  }
+  .admin_container .admin_content .admin_body .admin_body_content .delete {
+    color: red;
+  }
+  .admin_container .admin_content .admin_body .admin_body_content .dashboard_boxes {
+    display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .admin_container .admin_content .admin_body .admin_body_content .dashboard_boxes .dashboard_box {
+    width: auto;
+    min-width: 20rem;
+    max-width: 40rem;
+    overflow: auto;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem 3rem;
+  }
+  .admin_container .admin_content .admin_body .admin_body_content .dashboard_boxes .dashboard_box h5 {
+    color: rgba(0, 0, 0, 0.65);
+  }
+  .admin_container .admin_content .admin_body .admin_body_content .dashboard_boxes .dashboard_box h1 {
+    font-size: 5rem;
+    color: #900C3E;
+    margin: 1rem;
+    font-weight: bold;
+  }
+
+  .modal-title{
+    font-size:2rem;
+  }
+  .modal-content{
+    padding:2rem 2rem;
+  }
+
+  .input{
+    margin:1.6rem 0rem;
+  }
+
+  .input p {
+        font-size: 1.3rem;
+        color: rgba(0, 0, 0, 0.65);
+        font-weight: bold;
+    }
+
+    input,select,textarea {
+        width: 100%;
+        outline: none;
+        border: none;
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding: 0.8rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .input_with_icon {
+      position: relative;
+    }
+
+    .input_with_icon span {
+          position: absolute;
+          top: 50%;
+          right: 3%;
+          transform: translateY(-50%);
+          font-size: 2.5rem;
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+      }
+
+    .input_with_icon input {
+          padding-right: 4rem;
+      }
