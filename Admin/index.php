@@ -12,8 +12,6 @@ $itemscount = mysqli_num_rows($sql2);
 $sql3 = mysqli_query($conn, "select *  from branchs");
 $branchescount = mysqli_num_rows($sql3);
 
-$sql4 = mysqli_query($conn, "select *  from offers");
-$offerscount = mysqli_num_rows($sql4);
 
 ?>
 
@@ -58,14 +56,6 @@ $offerscount = mysqli_num_rows($sql4);
                             <div class="card-body ">
                                 <h5 class="card-title text-secondary">Total Branches</h5>
                                 <h1 class="card-text display-3"><?php echo $branchescount; ?></h1>
-                            </div>
-                        </div>
-
-                        <div class="card ">
-
-                            <div class="card-body ">
-                                <h5 class="card-title text-secondary">Total Running Offers</h5>
-                                <h1 class="card-text display-3 text-primary"><?php echo $offerscount; ?></h1>
                             </div>
                         </div>
 

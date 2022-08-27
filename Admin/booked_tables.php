@@ -73,7 +73,10 @@ $result2 = mysqli_query($conn, $branches);
         <div class="admin_content">
             <?php include "menu.php"; ?>
             <div class="admin_body">
+                
                 <div class="admin_body_content">
+                   <h1 class="mb-5 text-danger">Book Tables</h1>
+                   <hr class="mb-5">
                     <div class="input">
                         <p>Select Branch</p>
                         <select name="branch" id="branch" onchange="showDataByBranch(this.value)">

@@ -21,9 +21,17 @@ $result = mysqli_query($conn, $sql);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <!-- css -->
     <link href="index_.css" rel="stylesheet" type="text/css">
     <title>Mad Over Grills</title>
+    <script>
+        $(function(){
+            $("#feedbackForm").validate();
+        })
+    </script>
 </head>
 <?php
 if (isset($_POST['feedbackbtn'])) {
@@ -79,7 +87,7 @@ if (isset($_POST['feedbackbtn'])) {
             <!-- menu Section -->
             <div class="feedback-section container">
                 
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="false" id="feedbackForm" enctype="multipart/form-data">
+                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="false" id="feedbackForm" >
 
                   
                     <!-- name -->
@@ -96,7 +104,7 @@ if (isset($_POST['feedbackbtn'])) {
                     <!-- message -->
                     <div class="input">
                         <p>message</p>
-                        <textarea name="message" id="message" minlength="20"></textarea>
+                        <textarea name="message" id="message" minlength="20" maxlength="200" required></textarea>
                     </div>
 
                     <button class="button mt-4" name="feedbackbtn">Submit</button>

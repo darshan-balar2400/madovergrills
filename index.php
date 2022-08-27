@@ -38,7 +38,10 @@ if (isset($_POST['reservationbtn'])) {
     $sql = "insert into book_table (name,email,phno,branch,peoples,desire_date,desire_time) values ('$name','$email','$phno','$branch','$person','$date','$time')";
 
     if (mysqli_query($conn, $sql)) {
-        header("location:index.php");
+        echo '<script language="javascript">';
+        echo 'alert("Succesfully Reservation , Our Team Contact You Very Soon Via Email !")';  //not showing an alert box.
+        echo '</script>';
+    
     } else {
         echo mysqli_error($conn);
     }
@@ -67,8 +70,8 @@ if (isset($_POST['reservationbtn'])) {
                 </div>
                 <div class="menu_button">
                     <button class="menu_button" onclick="showMenu()">
-                    <ion-icon name="menu-outline"></ion-icon>
-                        </button>
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
                 </div>
             </div>
         </header>

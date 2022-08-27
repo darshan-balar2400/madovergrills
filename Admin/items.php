@@ -60,7 +60,7 @@ if (isset($_POST['insertbtn'])) {
                     <div class="top mb-5">
                         <button class="button" data-toggle="modal" data-target="#exampleModalScrollable">Create Item</button>
                     </div>
-                    <div class="table-responsive-lg">
+                    <div class="table-responsive-lg items_table">
                         <table class="table table-striped  table-hover" style="font-size:1.5rem;">
                             <thead>
                                 <tr>

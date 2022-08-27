@@ -21,9 +21,19 @@ $result = mysqli_query($conn, $sql);
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
     <!-- css -->
     <link href="index_.css" rel="stylesheet" type="text/css">
     <title>Mad Over Grills</title>
+
+    <script type="text/javascript">
+        $(function() {
+            $("#contactForm").validate();
+        });
+    </script>
+
 </head>
 <?php
 if (isset($_POST['reservationbtn'])) {
@@ -44,7 +54,7 @@ if (isset($_POST['reservationbtn'])) {
     }
 }
 
-if(isset($_POST['contactbtn'])){
+if (isset($_POST['contactbtn'])) {
     $c_name = $_POST['c_name'];
     $c_email = $_POST['c_email'];
     $c_phno = $_POST['c_phno'];
@@ -52,10 +62,9 @@ if(isset($_POST['contactbtn'])){
 
     $sql2 = "insert into contacts (name,email,phno,message) values ('$c_name','$c_email',$c_phno,'$c_message')";
 
-    if(mysqli_query($conn, $sql2)){
+    if (mysqli_query($conn, $sql2)) {
         header("location:index.php");
-    }
-    else {
+    } else {
         echo mysqli_error($conn);
     }
 }
@@ -83,8 +92,8 @@ if(isset($_POST['contactbtn'])){
                 </div>
                 <div class="menu_button">
                     <button class="menu_button" onclick="showMenu()">
-                    <ion-icon name="menu-outline"></ion-icon>
-                        </button>
+                        <ion-icon name="menu-outline"></ion-icon>
+                    </button>
                 </div>
             </div>
         </header>
@@ -131,7 +140,7 @@ if(isset($_POST['contactbtn'])){
                             Send Us Message
                         </div>
                         <div class="sub-title">We are here to answer any question you may have</div>
-                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="false" id="contactForm" enctype="multipart/form-data">
+                        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" autocomplete="false" id="contactForm">
 
                             <!-- name -->
                             <div class="input">
@@ -147,12 +156,12 @@ if(isset($_POST['contactbtn'])){
                             <!-- email -->
                             <div class="input">
                                 <p>phone no</p>
-                                <input type="number" name="c_phno" id="c_phno" required>
+                                <input type="number" name="c_phno" minlength="10" maxlength="10" id="c_phno" required>
                             </div>
 
                             <div class="input">
                                 <p>Message</p>
-                                <textarea name="c_message" id='c_message' minlength="20" required></textarea>
+                                <textarea name="c_message" id='c_message' minlength="10" maxlength="200" required></textarea>
                             </div>
 
                             <button class="button mt-4" name="contactbtn">Send Message</button>
@@ -169,12 +178,12 @@ if(isset($_POST['contactbtn'])){
                     <h1>Making a reservation at Mad Over Grills is easy and takes just a couple of minutes.
                     </h1>
                     <div class="row mt-5 chat-with-us">
-                        <div class="col-sm-6"><a href="https://wa.me/7623919269"target="_blank"><button class="button">Chat With Us</button></a></div>
+                        <div class="col-sm-6"><a href="https://wa.me/7623919269" target="_blank"><button class="button">Chat With Us</button></a></div>
                         <div class="col-sm-6 call-text">or call +91 7623919269</div>
                     </div>
                 </div>
             </div>
-           <?php include 'reservationtable.php'; ?>
+            <?php include 'reservationtable.php'; ?>
         </section>
         <footer>
             <div class="container">
@@ -186,7 +195,8 @@ if(isset($_POST['contactbtn'])){
         </footer>
     </div>
     <script type="text/javascript" src="reservationformvalidation.js">
-	</script>
+    </script>
+   
 </body>
 
 </html>

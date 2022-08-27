@@ -5,11 +5,11 @@ $branch_no = $_GET['branch_no'];
 
 include "../conn.php";
 
-
 if ($branch_no === "") {
-    $sql = "select * from book_table where book_id = $book_id";
-} else {
-    $sql = "select * from book_table where branch = $branch_no and book_id = $book_id";
+    $sql = "select * from book_table where book_id like '%$book_id%'";
+} 
+else {
+    $sql = "select * from book_table where branch like '%$branch_no%' and book_id like '%$book_id%'";
 }
 $result = mysqli_query($conn, $sql);
 

@@ -27,7 +27,8 @@ $result = mysqli_query($conn, $sql);
             <?php include "menu.php" ?>
             <div class="admin_body">
                 <div class="admin_body_content">
-                    
+                <h1 class="mb-5 text-danger">Contacts</h1>
+                   <hr class="mb-5">
                     <div class="table-responsive-lg">
                         <table class="table table-striped  table-hover" style="font-size:1.5rem;">
                             <thead>

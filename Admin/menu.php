@@ -40,16 +40,9 @@
                 </a>
             </div>
             <div class="admin_menu_item">
-                <a href="offers.php">
-                    <button>
-                        Offers
-                    </button>
-                </a>
-            </div>
-            <div class="admin_menu_item">
                 <a href="questions.php">
                     <button>
-                        questions
+                        contacts
                     </button>
                 </a>
             </div>

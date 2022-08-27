@@ -589,4 +589,8 @@ footer {
         display: block;
     }
 
+    section .menu-hero-section {
+        background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url("images/menu.jpg");
+    }
+
 }
