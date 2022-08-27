@@ -21,7 +21,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-It is an online booking table,seeing menu,etc.. of resturant. We provides some online fecilities like the following to the any user
+It is an online booking table,seeing menu,etc.. of Restaurant . We provides some online fecilities like the following to the any user
 
 - user can pre book the table for specified date and time,
 - user can see online menu of resturant, 
