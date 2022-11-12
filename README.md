@@ -14,7 +14,7 @@
     A Restaurant Website
     <br />
   </p>
-  <a href="https://mad-overgrills.herokuapp.com/">View Demo</a>
+  <a href="">View Demo</a>
 </div>
 
 
